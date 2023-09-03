@@ -55,6 +55,33 @@ function printNewUserInput()
 {
     document.body.innerHTML+= getTextInTagWithAtt("input",`type='${prompt("Enter type for input")}'`)
 }
+// printNewUserInput();
+//12
+function changeAllClassText(className,inText){
+    var classNCol= document.getElementsByClassName(className)
+    for (var i=0;i<classNCol.length;i++){
+        classNCol[i].innerText=inText;
+    }
+}
 
-printNewUserInput();
+// changeAllClassText("cl12",prompt("Enter text to change"))
+
+//13
+function printP13WithSpan(){
+    for (var i=0;i<6;i++){
+        document.body.innerHTML+= getTextInTagWithAtt("p","class='cl13'","sample text")
+    }
+    addSpanInP13()
+}
+function addSpanInP13(){
+    var p13Col= document.getElementsByClassName("cl13")
+    for (let i = 0; i < p13Col.length; i++) {
+        p13Col[i].innerHTML+= getTextInTag("span","   text   ")
+        
+    }
+}
+document.que
+printP13WithSpan()
+//14
+
 
