@@ -1,4 +1,6 @@
 //general
+var mainEl =document.getElementById('mainDiv')
+
 function getTextInTag(strTag, strText=""){
     return `<${strTag}>${strText}</${strTag}>`
 }
@@ -80,8 +82,24 @@ function addSpanInP13(){
         
     }
 }
-document.que
-printP13WithSpan()
+// printP13WithSpan()
 //14
+function printUserNameAge(){
+    var userFname= prompt('enter your first name')
+    var userLname= prompt('enter your last name')
+    var userAge= +prompt('enter your age')
+    mainDiv.innerHTML+= getTextInTagWithAtt('p','id="userNameStr"',`First Name:${userFname} ,Last Name:${userLname} ,Age:${userAge}`)
+    if(userAge<18){
+        mainDiv.innerHTML+= getTextInTagWithAtt('input',`type="color" onchange="changeUserStrCol(this.value)"`)
+    }
+}
+function changeUserStrCol(newCol){
+    document.getElementById("userNameStr").style.color=newCol
+}
+
+printUserNameAge();
+
+
+
 
 
